@@ -6,6 +6,8 @@ Create on July 30, 2025
 @description: This program is based off of DanielsWorlds single player Commander game called Goldfishing.
 """
 import random
+from cmath import phase
+
 
 def welcome():
     """Simple welcome screen for the player. Used to explain the rules."""
@@ -80,11 +82,17 @@ class Player:
     timeSeven = False
     timeTen = False
     checkpoint = 50
+    prevTurn = 1
 
     def display(self):
         """Display the player's stats before each action is taken."""
         print()
-        print("".center(150, "*"))
+        if self.prevTurn != self.turn:
+            print(" New Turn! ".center(150, '*'))
+            self.prevTurn = self.turn
+        else:
+            print("".center(150, "*"))
+        self.phase()
         print("Current life total: {}".format(self.lifeTotal).center(150, " "))
         print("Current number of time counters: {}".format(self.time).center(150, " "))
         print("Current turn: {}".format(self.turn).center(150, " "))
@@ -92,6 +100,12 @@ class Player:
         print("Current number of opponents: {}".format(self.numOpp).center(150, " "))
         print("".center(150, "*"))
 
+    def phase(self):
+        """Letting the player know what phase they are in."""
+        if self.numOpp == 3:
+            print(" Phase 1 ".center(150, ' '))
+        else:
+            print(" Phase 2 ".center(150, ' '))
 
     def play(self):
         """Tracking the game for the player. Will take an input from the player and act accordingly.
@@ -122,7 +136,7 @@ class Player:
                     damage = int(input("How much damage did you deal?: "))
                     self.oppLifeTotal -= damage
                     if self.oppLifeTotal <= 40:
-                        self.numOpp -= 1
+                        self.numOpp = 2
                     if self.oppLifeTotal < self.checkpoint:
                         self.checkpoint -= 20
                         self.time += 1
@@ -201,7 +215,6 @@ class Player:
                 print("Discard a card of your choice.")
             elif random_num == 6:
                 print("Return the permanent with the highest mana value to your hand.")
-        print()
 
 if __name__ == '__main__':
 
