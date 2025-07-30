@@ -6,8 +6,6 @@ Create on July 30, 2025
 @description: This program is based off of DanielsWorlds single player Commander game called Goldfishing.
 """
 import random
-from cmath import phase
-
 
 def welcome():
     """Simple welcome screen for the player. Used to explain the rules."""
@@ -92,7 +90,7 @@ class Player:
             self.prevTurn = self.turn
         else:
             print("".center(150, "*"))
-        self.phase()
+        self.curr_phase()
         print("Current life total: {}".format(self.lifeTotal).center(150, " "))
         print("Current number of time counters: {}".format(self.time).center(150, " "))
         print("Current turn: {}".format(self.turn).center(150, " "))
@@ -100,7 +98,7 @@ class Player:
         print("Current number of opponents: {}".format(self.numOpp).center(150, " "))
         print("".center(150, "*"))
 
-    def phase(self):
+    def curr_phase(self):
         """Letting the player know what phase they are in."""
         if self.numOpp == 3:
             print(" Phase 1 ".center(150, ' '))
@@ -129,38 +127,35 @@ class Player:
                 continue
             if action == 'S':
                 self.time -= 1
+                continue
             elif action == 'M':
                 self.time -= 2
+                continue
             elif action == 'D':
                 try:
                     damage = int(input("How much damage did you deal?: "))
                     self.oppLifeTotal -= damage
-                    if self.oppLifeTotal <= 0:
-                        break
+                    if damage >= 20:
+                        self.time -= 1
                     if self.oppLifeTotal <= 40:
                         self.numOpp = 2
                     if self.oppLifeTotal < self.checkpoint:
                         self.checkpoint -= 20
                         self.time += 1
+                    continue
                 except ValueError:
                     print("Please enter a number.")
             elif action == 'A':
                 self.time += 1
-            elif action == 'P':
-                self.end_turn()
-                if self.lifeTotal <= 0:
-                    break
+                continue
             elif action == 'L':
                 damage = int(input("How much life did you lose?: "))
                 self.lifeTotal -= damage
-            if self.time >= 10 and self.timeTen == False:
-                print()
-                print("*** WIPE THE BOARD OF ALL CREATURES!!! TIME COUNTERS HAS REACHED 10! ***".center(150, '*'))
-                self.timeTen = True
-            elif self.time >= 7 and self.timeSeven == False:
-                print()
-                print("*** WIPE THE BOARD OF ALL CREATURES!!! TIME COUNTERS HAS REACHED 7! ***".center(150, '*'))
-                self.timeSeven = True
+                continue
+            elif action == 'P' and self.time < self.lifeTotal:
+                self.end_turn()
+                continue
+            self.lifeTotal -= self.time
 
     def end_turn(self):
         """Handling the end of the turn.
@@ -177,6 +172,14 @@ class Player:
             self.time += 1
             self.turn += 1
             self.lifeTotal -= self.time
+            if self.time >= 10 and self.timeTen == False and self.lifeTotal > 0:
+                print()
+                print("*** WIPE THE BOARD OF ALL CREATURES!!! TIME COUNTERS HAS REACHED 10! ***".center(150, '*'))
+                self.timeTen = True
+            elif self.time >= 7 and self.timeSeven == False and self.lifeTotal > 0:
+                print()
+                print("*** WIPE THE BOARD OF ALL CREATURES!!! TIME COUNTERS HAS REACHED 7! ***".center(150, '*'))
+                self.timeSeven = True
         except ValueError:
             print("Please enter a number.")
 
@@ -241,7 +244,7 @@ if __name__ == '__main__':
     player.play()
     if player.oppLifeTotal == 0:
         print()
-        print("*** CONGRATULATIONS!!! YOU WON!!! ***".center(150, '*'))
+        print(" CONGRATULATIONS!!! YOU WON!!! ".center(150, '*'))
         exit()
     print()
-    print("*** You Lost. Better luck next time! ***".center(150, '*'))
+    print(" You Lost. Better luck next time! ".center(150, '*'))

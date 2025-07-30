@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="374d25e5-d634-4907-9304-a162a5d02a67" name="Changes" comment="Added spacing.">
+    <list default="true" id="374d25e5-d634-4907-9304-a162a5d02a67" name="Changes" comment="Added a break if the life total of the player or opponents reaches zero or less.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -118,7 +119,7 @@
       <option name="presentableId" value="Default" />
       <updated>1753856560460</updated>
       <workItem from="1753856561390" duration="13743000" />
-      <workItem from="1753908636183" duration="3565000" />
+      <workItem from="1753908636183" duration="7352000" />
     </task>
     <task id="LOCAL-00001" summary="Finished">
       <option name="closed" value="true" />
@@ -176,7 +177,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753911789963</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added a break if the life total of the player or opponents reaches zero or less.">
+      <option name="closed" value="true" />
+      <created>1753912343265</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1753912343265</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -210,9 +219,10 @@
     <MESSAGE value="Add option 'L' for if the player lost life during their turn" />
     <MESSAGE value="Letting the player know when it's a new turn and what phase it is." />
     <MESSAGE value="Added spacing." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added spacing." />
+    <MESSAGE value="Added a break if the life total of the player or opponents reaches zero or less." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added a break if the life total of the player or opponents reaches zero or less." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Goldfishing2_5$main.coverage" NAME="main Coverage Results" MODIFIED="1753911469215" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Goldfishing2_5$main.coverage" NAME="main Coverage Results" MODIFIED="1753915877115" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
