@@ -135,6 +135,8 @@ class Player:
                 try:
                     damage = int(input("How much damage did you deal?: "))
                     self.oppLifeTotal -= damage
+                    if self.oppLifeTotal <= 0:
+                        break
                     if self.oppLifeTotal <= 40:
                         self.numOpp = 2
                     if self.oppLifeTotal < self.checkpoint:
@@ -146,6 +148,8 @@ class Player:
                 self.time += 1
             elif action == 'P':
                 self.end_turn()
+                if self.lifeTotal <= 0:
+                    break
             elif action == 'L':
                 damage = int(input("How much life did you lose?: "))
                 self.lifeTotal -= damage
