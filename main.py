@@ -82,7 +82,7 @@ class Player:
     timeSeven = False
     timeTen = False
     checkpoint = 50
-    prevTurn = 1
+    prevTurn = 0
 
     def display(self):
         """Display the player's stats before each action is taken."""

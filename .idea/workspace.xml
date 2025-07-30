@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="374d25e5-d634-4907-9304-a162a5d02a67" name="Changes" comment="Add option 'L' for if the player lost life during their turn">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-    </list>
+    <list default="true" id="374d25e5-d634-4907-9304-a162a5d02a67" name="Changes" comment="Add option 'L' for if the player lost life during their turn" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -119,7 +116,7 @@
       <option name="presentableId" value="Default" />
       <updated>1753856560460</updated>
       <workItem from="1753856561390" duration="13743000" />
-      <workItem from="1753908636183" duration="2089000" />
+      <workItem from="1753908636183" duration="2776000" />
     </task>
     <task id="LOCAL-00001" summary="Finished">
       <option name="closed" value="true" />
@@ -153,7 +150,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753909363654</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Add option 'L' for if the player lost life during their turn">
+      <option name="closed" value="true" />
+      <created>1753911249518</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1753911249518</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,6 +193,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Add option 'L' for if the player lost life during their turn" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Goldfishing2_5$main.coverage" NAME="main Coverage Results" MODIFIED="1753909380624" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Goldfishing2_5$main.coverage" NAME="main Coverage Results" MODIFIED="1753911327910" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
