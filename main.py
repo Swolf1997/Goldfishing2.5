@@ -213,7 +213,7 @@ if __name__ == '__main__':
             if userInput == 'Y':
                 break
             elif userInput == 'N':
-                exit()
+                exit(0)
         except ValueError:
             print("Please enter a valid input.")
     player.play()
