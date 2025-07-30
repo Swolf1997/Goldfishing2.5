@@ -108,9 +108,9 @@ class Player:
             print("")
             print(" TURN ACTION! ".center(150, '*'))
             action = input("\nWhen you are finsh [P]ass the turn.\n"
-                           "What did you do this turn? [S]ingle Target Interaction, "
+                           "What did you do this turn? [L]ost life, [S]ingle Target Interaction, "
                             "[M]ass Interaction, [D]elt Damage, or gave an [A]dvantage?: ").upper()
-            if action not in "SMDAP" or len(action) != 1:
+            if action not in "SMDAPL" or len(action) != 1:
                 print("Please enter a valid action.")
                 continue
             if action == 'S':
@@ -132,6 +132,9 @@ class Player:
                 self.time += 1
             elif action == 'P':
                 self.end_turn()
+            elif action == 'L':
+                damage = int(input("How much life did you lose?: "))
+                self.lifeTotal -= damage
             if self.time >= 10 and self.timeTen == False:
                 print("*** WIPE THE BOARD OF ALL CREATURES!!! TIME COUNTERS HAS REACHED 10! ***".center(150, '*'))
                 self.timeTen = True
