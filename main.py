@@ -150,9 +150,11 @@ class Player:
                 damage = int(input("How much life did you lose?: "))
                 self.lifeTotal -= damage
             if self.time >= 10 and self.timeTen == False:
+                print()
                 print("*** WIPE THE BOARD OF ALL CREATURES!!! TIME COUNTERS HAS REACHED 10! ***".center(150, '*'))
                 self.timeTen = True
             elif self.time >= 7 and self.timeSeven == False:
+                print()
                 print("*** WIPE THE BOARD OF ALL CREATURES!!! TIME COUNTERS HAS REACHED 7! ***".center(150, '*'))
                 self.timeSeven = True
 
