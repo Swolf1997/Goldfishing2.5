@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="374d25e5-d634-4907-9304-a162a5d02a67" name="Changes" comment="Cleaned up a couple of things. PLayer now will lose before rolling. Fixed damage dealt. Miss understood damage rule." />
+    <list default="true" id="374d25e5-d634-4907-9304-a162a5d02a67" name="Changes" comment="Cleaned up a couple of things. PLayer now will lose before rolling. Fixed damage dealt. Miss understood damage rule.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,12 +24,12 @@
     <branch-grouping />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Swolf1997"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Swolf1997&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubDefaultAccount">
     <option name="defaultAccountId" value="01a2d92f-1402-4995-9b8c-79bfd17d6b30" />
   </component>
@@ -119,7 +122,8 @@
       <option name="presentableId" value="Default" />
       <updated>1753856560460</updated>
       <workItem from="1753856561390" duration="13743000" />
-      <workItem from="1753908636183" duration="7717000" />
+      <workItem from="1753908636183" duration="8056000" />
+      <workItem from="1754001271624" duration="835000" />
     </task>
     <task id="LOCAL-00001" summary="Finished">
       <option name="closed" value="true" />
@@ -193,7 +197,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753916170702</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Cleaned up a couple of things. PLayer now will lose before rolling. Fixed damage dealt. Miss understood damage rule.">
+      <option name="closed" value="true" />
+      <created>1753916670134</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1753916670134</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

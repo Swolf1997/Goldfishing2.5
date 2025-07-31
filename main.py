@@ -186,44 +186,28 @@ class Player:
     def roll(self):
         """Roll dice. This handles the dice rolling for depending on the phase.
         Keywords:
+        arr_phase_one -- Storing the results of a roll for phase one. Some of the prompts are different between the two phases.
+        arr_phase_two -- Storing the results of a roll for phase two.
         random_num -- Simulate rolling either a d6 or a d8"""
+        arr_phase_one = ["Nothing happened.", "Destroy a single permanent that would be the most detrimental to your current board.",
+                       "Sacrifice a nonland permanent at random.", "Exile all graveyards, tap then place a stun counter on a creature at random.",
+                       "Discard a card of your choice.", "Return the permanent with the highest mana value to your hand."]
+        arr_phase_two = ["Nothing happened.", "Destroy a single permanent that would be the most detrimental to your current board.",
+                       "Sacrifice a nonland permanent at random.", "Exile all graveyards, tap then place a stun counter on a creature at random.",
+                       "Discard a card at random.", "Return the permanent with the highest mana value to your hand.",
+                       "Put the nonland nontoken permanent with the lowest converted mana cost on top of your library.", "Destroy all creatures. -1 Time counters."]
         print("")
         print("*** Rolling Dice! ***".center(150, '*'))
         if self.oppLifeTotal <= 30:
-            random_num = random.randint(1, 8)
-            print("\nYou rolled a {}".format(random_num))
-            if random_num == 1:
-                print("Nothing happened.")
-            elif random_num == 2:
-                print("Destroy a single permanent that would be the most detrimental to your current board.")
-            elif random_num == 3:
-                print("Sacrifice a nonland permanent at random.")
-            elif random_num == 4:
-                print("Exile all graveyards, tap then place a stun counter on a creature at random.")
-            elif random_num == 5:
-                print("Discard a card at random.")
-            elif random_num == 6:
-                print("Return the permanent with the highest mana value to your hand.")
-            elif random_num == 7:
-                print("Put the nonland nontoken permanent with the lowest converted mana cost on top of your library.")
-            elif random_num == 8:
-                print("Destroy all creatures. -1 Time counters.")
+            random_num = random.randint(0, 7)
+            print("\nYou rolled a {}".format(random_num + 1))
+            if random_num == 7:
                 self.time -= 1
+            return print(arr_phase_two[random_num])
         else:
-            random_num = random.randint(1, 6)
-            print("\nYou rolled a {}".format(random_num))
-            if random_num == 1:
-                print("Nothing happened.")
-            elif random_num == 2:
-                print("Destroy a single permanent that would be the most detrimental to your current board.")
-            elif random_num == 3:
-                print("Sacrifice a nonland permanent of your choice.")
-            elif random_num == 4:
-                print("Exile all graveyards, tap then place a stun counter on a creature at random.")
-            elif random_num == 5:
-                print("Discard a card of your choice.")
-            elif random_num == 6:
-                print("Return the permanent with the highest mana value to your hand.")
+            random_num = random.randint(0, 5)
+            print("\nYou rolled a {}".format(random_num + 1))
+            return print(arr_phase_one[random_num])
 
 if __name__ == '__main__':
 
